@@ -14,8 +14,14 @@
 
 <div class="bcontainer">
 
-<form action="/upload" method="post" enctype="multipart/form-data">  
-  <input id="upload" type="file" value="Select File" name="upload" /> <br />
+<form action="/upload" method="post" enctype="multipart/form-data">    
+    <input id="upload" type="file" value="Select File" name="upload" /> 
+    %if (message):
+    <div class="tx-lt-red">
+      <h4>{{message}}</h4>
+    </div>
+    %end  
+    <br />
   <input type="submit" value="Upload" class="btn bg-lt-orange"/>
 </form>
 
